@@ -7,6 +7,9 @@
       <div class="z-40 flex-shrink pl-6 pt-6 bg-white border-r border-grey-400">
 
         <div class="side z-50">
+
+          <div class="text-lg font-bold mb-4">Navigation</div>
+
           <div class="text-lg font-bold mb-4">Blocks</div>
           <div>
             <flowy-new-block

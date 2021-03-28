@@ -17,8 +17,11 @@
           <flowy-drag-handle>
             <img :src="`demo_assets/grabme.svg`" />
           </flowy-drag-handle>
-          <div class="absolute z-50 -ml-10 py-2 bg-white shadow rounded text-xs" v-show="dropdown">
-            <span class="cursor-pointer p-2 hover:bg-gray-200" @click="remove()">remove</span>
+          <div class="relative z-50 -ml-10 py-2 bg-white shadow rounded text-xs"
+          v-show="dropdown" v-click-outside="handleOutside">
+            <span class="cursor-pointer p-2 hover:bg-gray-200 block" @click="remove()">Enter</span>
+            <span class="cursor-pointer p-2 hover:bg-gray-200 block" @click="remove()">Edit</span>
+            <span class="cursor-pointer p-2 hover:bg-gray-200 block" @click="remove()">Delete</span>
           </div>
         </div>
       </div>
@@ -38,15 +41,25 @@
 .example-node {
   width: 320px;
 }
+span.block {
+    display:block;
+}
 .bg-white {
   background-color: #ffffff;
 }
 </style>
 
 <script>
+import ClickOutside from 'vue-click-outside';
+
 /* eslint-disable no-unused-vars */
 
 export default {
+
+  directives: {
+    ClickOutside,
+  },
+
   props: {
     width: {
       default: 200,
@@ -84,6 +97,12 @@ export default {
 
   },
   methods: {
+
+    handleOutside() {
+      if (this.dropdown === true) {
+        this.dropdown = false;
+      }
+    },
 
   },
 };

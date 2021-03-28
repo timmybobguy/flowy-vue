@@ -1,38 +1,38 @@
 module.exports = [
   {
     preview: {
-      title: 'New visitor',
-      description: 'Triggers when somebody visits a specified page',
+      title: 'New task',
+      description: 'Creates a new task to be done',
       icon: 'eye',
     },
     node: {
-      title: 'New visitor',
-      description: '<span>When a <span class="font-bold">new visitor</span> goes to <span class="font-bold">Site 1</span></span>',
+      title: 'TASKNAME',
+      description: 'TASK DESCRIPTION',
       icon: 'eyeblue',
     },
   },
   {
     preview: {
-      title: 'Update database',
-      description: 'Triggers when somebody performs a specified action',
-      icon: 'error',
+      title: 'Stopgate - Hard',
+      description: 'Ill stop you for sure',
+      icon: 'log',
     },
     node: {
-      title: 'Update database',
-      description: '<span>Triggers when somebody performs a <span class="font-bold">specified action</span></span>',
-      icon: 'errorred',
+      title: 'Stopgate - Hard',
+      description: 'Ill stop you for sure',
+      icon: 'log',
     },
   },
   {
     preview: {
-      title: 'Time has passed',
-      description: 'Triggers after a specified amount of time',
-      icon: 'database',
+      title: 'Stopgate - Soft',
+      description: 'I might you for sure',
+      icon: 'search',
     },
     node: {
-      title: 'Time has passed',
-      description: 'Triggers after a specified <span class="font-bold">amount</span> of time',
-      icon: 'databaseorange',
+      title: 'Stopgate - Soft',
+      description: 'I might stop you for sure',
+      icon: 'search',
     },
   },
 ];

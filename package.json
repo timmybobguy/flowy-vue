@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "@hipsjs/shopify-draggable-vue": "^1.0.7",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "vue-click-outside": "^1.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "4.4.1",

@@ -10,6 +10,8 @@
 
           <div class="text-lg font-bold mb-4">Navigation</div>
 
+          <button @click="output">Output nodes</button>
+
           <div class="text-lg font-bold mb-4">Blocks</div>
           <div>
             <flowy-new-block
@@ -92,10 +94,8 @@ export default {
     },
     beforeAdd() {
       console.log('before add');
+      // alert('Bring up menu for adding here');
       return true;
-    },
-    afterAdd() {
-
     },
     onEnterDrop(event) {
       console.log('entered drop');
@@ -126,6 +126,7 @@ export default {
       console.log('move', event);
       const { dragged, to } = event;
       dragged.parentId = to.id;
+      console.log(this.blocks);
     },
     add(event) {
       const id = generateId();
@@ -137,6 +138,9 @@ export default {
     onDragStart(event) {
       console.log('onDragStart', event);
       this.dragging = true;
+    },
+    output() {
+      console.log(this.nodes);
     },
   },
   watch: {

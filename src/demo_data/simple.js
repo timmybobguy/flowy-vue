@@ -6,7 +6,7 @@ module.exports = [
     data: {
       width: 320,
       text: 'Parent block',
-      title: 'Root task',
+      title: 'New case started',
       description: 'TASK DESCRIPTION',
       icon: 'eyeblue',
     },

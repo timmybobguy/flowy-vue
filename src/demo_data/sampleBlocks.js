@@ -13,6 +13,18 @@ module.exports = [
   },
   {
     preview: {
+      title: 'New loop task',
+      description: 'Creates a looping task to be done',
+      icon: 'search',
+    },
+    node: {
+      title: 'TASK NAME',
+      description: 'TASK DESCRIPTION',
+      icon: 'search',
+    },
+  },
+  {
+    preview: {
       title: 'Stopgate - Hard',
       description: 'Ill stop you for sure',
       icon: 'log',

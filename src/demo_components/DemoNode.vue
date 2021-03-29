@@ -17,8 +17,7 @@
           <flowy-drag-handle>
             <img :src="`demo_assets/grabme.svg`" />
           </flowy-drag-handle>
-          <div class="relative z-50 -ml-10 py-2 bg-white shadow rounded text-xs"
-          v-show="dropdown" v-click-outside="handleOutside">
+          <div class="relative z-50 -ml-10 py-2 bg-white shadow rounded text-xs" v-show="dropdown" v-click-outside="handleOutside" v-if="node.parentId != -1">
             <span class="cursor-pointer p-2 hover:bg-gray-200 block" @click="remove()">Enter</span>
             <span class="cursor-pointer p-2 hover:bg-gray-200 block" @click="remove()">Edit</span>
             <span class="cursor-pointer p-2 hover:bg-gray-200 block" @click="remove()">Delete</span>
@@ -46,6 +45,13 @@ span.block {
 }
 .bg-white {
   background-color: #ffffff;
+}
+// Disables text highlighting
+body {
+  -webkit-user-select: none;
+     -moz-user-select: -moz-none;
+      -ms-user-select: none;
+          user-select: none;
 }
 </style>
 
